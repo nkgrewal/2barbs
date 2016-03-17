@@ -2,17 +2,18 @@
 ---
 @import '../_sass/bootstrap';
 @import '../_sass/syntax-highlighting';
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200);
 
 
 $scotch-primary: rgb(255, 69, 69);
 $scotch-secondary: #FF7B7B;
 
-%oswald { font-family: 'Oswald', sans-serif; }
-%roboto { font-family: 'Roboto Condensed', sans-serif; }
+%displayFont { font-family: 'Champagne & Limousines', 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+%textFont { font-family: 'Roboto', sans-serif; }
 
 
 body {
-    @extend %roboto;
+    @extend %textFont;
     font-size: 18px;
     line-height: 30px;
     padding-top: 51px;
@@ -33,9 +34,9 @@ a {
 .btn {
     text-transform: uppercase;
     font-weight: 400;
-    @extend %oswald;
+    @extend %displayFont;
 }
-h1, h2, h3, h4, h5, h6 { @extend %oswald; }
+h1, h2, h3, h4, h5, h6 { @extend %displayFont; }
 ::selection {
     background: #086AFF;
     color: #fff;
@@ -79,7 +80,7 @@ h1.special {
     overflow: hidden;
     margin: 0;
     text-transform: uppercase;
-    @extend %oswald;
+    @extend %displayFont;
     font-size: 69px;
     line-height: 69px;
     font-weight: 700;
@@ -200,7 +201,7 @@ h1.special {
             font-size: 12px;
             line-height: 1.5;
             text-transform: uppercase;
-            @extend %oswald;
+            @extend %displayFont;
         }
     }
 
@@ -226,7 +227,7 @@ aside {
     font-size: 17px;
     color: #525252;
     margin: 16px 0;
-    @extend %oswald;
+    @extend %displayFont;
 
     span {
         text-transform: uppercase;
@@ -300,3 +301,54 @@ pre {
         line-height: 35px;
     }
 }
+
+
+
+/* NKG */
+p{font-weight:200}
+.title-group{margin:50px auto;}
+.byline{
+    list-style:none;
+    font-size:21px;
+    font-weight:200;
+}
+.byline li{
+    padding:0 20px;
+    display:inline-block;
+}
+.byline li:first-child{
+    border-right:1px solid #ccc;
+}
+.hashbrown{color:#666;}
+
+
+.home{
+    margin:0 auto;
+    padding:40px;
+    width:100%;
+    max-width:600px;
+    border:1px solid #eee;
+}
+.home p, .home h3{text-align:center;}
+.site-footer{
+    margin-top:80px;
+    text-align:center;
+    font-size:0.8em;
+    border-top: 1px dotted #eee;
+}
+.site-footer p{padding-top:1.5em;}
+hr.decorative:after, .site-footer:after {
+    content: '§';
+    display: block;
+    position: absolute;
+    top: -17px;
+    left:48%;
+    padding:0 10px 5px 10px;
+    color: #ccc;
+    font-size: 18px;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+
