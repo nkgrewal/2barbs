@@ -91,6 +91,7 @@ h1.special {
         position: relative;
         padding: 0 15px;
         max-width: 1000px;
+        z-index: 10;
 
         &:before, &:after {
             content: '';
@@ -349,6 +350,15 @@ hr.decorative:after, .site-footer:after {
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     transform: rotate(60deg);
+}
+
+.juicer-feed h1.referral{
+    position:absolute;
+    bottom:-15px;
+}
+.juicer-feed h1.referral a{
+    color:#ccc !important;
+    font-size:12px !important;
 }
 
 
