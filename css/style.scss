@@ -357,8 +357,10 @@ hr.decorative:after, .site-footer:after {
     bottom:-15px;
 }
 .juicer-feed h1.referral a{
-    color:#ccc !important;
-    font-size:12px !important;
+    color:#bbb !important;
+    font-size:14px;
 }
-
+.juicer-feed.loaded{
+    overflow:hidden;
+}
 
