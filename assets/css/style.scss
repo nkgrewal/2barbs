@@ -5,18 +5,54 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200);
 
 
-$scotch-primary: rgb(255, 69, 69);
-$scotch-secondary: #FF7B7B;
+/* FONTS USED */
+@font-face {
+    font-family: 'Fabfelt';
+    src: url('../fonts/fabfeltscript-bold.eot');
+    src: url('../fonts/fabfeltscript-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fabfeltscript-bold.woff2') format('woff2'),
+         url('../fonts/fabfeltscript-bold.woff') format('woff'),
+         url('../fonts/fabfeltscript-bold.ttf') format('truetype'),
+         url('../fonts/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-%displayFont { font-family: 'Champagne & Limousines', 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
-%textFont { font-family: 'Roboto', sans-serif; }
+@font-face {
+    font-family: 'Clear Sans';
+    src: url('ClearSans-Regular-webfont.eot');
+    src: url('ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ClearSans-Regular-webfont.woff') format('woff'),
+         url('ClearSans-Regular-webfont.ttf') format('truetype'),
+         url('ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Clear Sans';
+    src: url('ClearSans-Light-webfont.eot');
+    src: url('ClearSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ClearSans-Light-webfont.woff') format('woff'),
+         url('ClearSans-Light-webfont.ttf') format('truetype'),
+         url('ClearSans-Light-webfont.svg#clear_sans_lightregular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+$primary-color: #964F4C;
+$secondary-color: #8981A0;
+$highlight: #f7de86;
+
+%displayFont { font-family: 'Fabfelt', 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+%textFont { font-family: 'Clear Sans', sans-serif; }
 
 
 body {
     @extend %textFont;
     font-size: 18px;
-    line-height: 30px;
-    padding-top: 51px;
+    line-height: 1.2em;
+    padding-top: 55px;
     -webkit-font-smoothing: antialiased;
 }
 p {
@@ -27,7 +63,7 @@ a {
     outline: none !important;
     text-decoration: none !important;
     transition: all 225ms ease;
-    color: $scotch-secondary;
+    color: $secondary-color;
 
     &:hover { color: #6165FF; }
 }
@@ -36,7 +72,10 @@ a {
     font-weight: 400;
     @extend %displayFont;
 }
-h1, h2, h3, h4, h5, h6 { @extend %displayFont; }
+h1, h2, h3, h4, h5, h6 { 
+    @extend %displayFont;
+    line-height:1.25em;
+}
 ::selection {
     background: #086AFF;
     color: #fff;
@@ -54,7 +93,7 @@ nav.navbar {
 
         i {
             transition: inherit;
-            color: $scotch-primary;
+            color: $primary-color;
             transform: scale(1);
         }
 
@@ -79,12 +118,9 @@ h1.special {
     text-align: center;
     overflow: hidden;
     margin: 0;
-    text-transform: uppercase;
     @extend %displayFont;
     font-size: 69px;
-    line-height: 69px;
-    font-weight: 700;
-    color: $scotch-primary;
+    color: $primary-color;
 
     span {
         display: inline-block;
@@ -98,7 +134,7 @@ h1.special {
             position: absolute;
             display: block;
             height: 1px;
-            background: #e8e8e8;
+            background: $highlight;
             width: 99999999px;
             top: 50%;
             transform: translateY(-50%);
@@ -200,7 +236,7 @@ h1.special {
         span {
             padding: 1px 5px;
             font-size: 12px;
-            line-height: 1.5;
+            line-height: 1.5em;
             text-transform: uppercase;
             @extend %displayFont;
         }
@@ -328,24 +364,24 @@ p{font-weight:200}
     padding:40px;
     width:100%;
     max-width:600px;
-    border:1px solid #eee;
+    border:1px solid $highlight;
 }
 .home p, .home h3{text-align:center;}
 .site-footer{
     margin-top:80px;
     text-align:center;
     font-size:0.8em;
-    border-top: 1px dotted #eee;
+    border-top: 1px dotted $highlight;
 }
 .site-footer p{padding-top:1.5em;}
 hr.decorative:after, .site-footer:after {
     content: '§';
     display: block;
     position: absolute;
-    top: -17px;
+    top: -13px;
     left:48%;
     padding:0 10px 5px 10px;
-    color: #ccc;
+    color: $highlight;
     font-size: 18px;
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
@@ -362,5 +398,8 @@ hr.decorative:after, .site-footer:after {
 }
 .juicer-feed.loaded{
     overflow:hidden;
+}
+.j-stacker-wrapper{
+    padding:15px 0;
 }
 
