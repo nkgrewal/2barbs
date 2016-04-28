@@ -22,7 +22,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      [jekyll-paginate]
+gems:      []
 
 # Conversion
 markdown:    kramdown
@@ -38,8 +38,8 @@ baseurl: "" # does not include hostname
 
 # Outputting
 permalink:     /wlog/:title.html
-paginate: 300
-paginate_path: /wlog/page:num
+#paginate: 300
+#paginate_path: /wlog/page:num
 timezone:      null
 
 quiet:    false
