@@ -1,4 +1,2 @@
 main:
-    - { url: '/wlog', text: 'Wlog' }
     - { url: '/photos', text: 'Photos' }
-    - { url: '/rsvp', text: 'RSVP' }
