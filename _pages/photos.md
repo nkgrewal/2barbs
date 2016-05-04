@@ -6,7 +6,7 @@ permalink: /photos/
 <<<<<<< HEAD
 <div class="col-md-10 col-md-offset-1">
     <h2>Photo feed for #2barbs</h2>
-    <p>Updates every 24 hours. To show up in the feed, use the above hashtag in either Instagram or Facebook</p>
+    <p>Updates every 24 hours. To show up in the feed, use #2barbs in either Instagram or Facebook</p>
 </div>
 <div class="col-md-12 feed">
 =======
