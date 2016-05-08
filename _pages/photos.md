@@ -5,7 +5,7 @@ permalink: /photos/
 ---
 <div class="col-md-10 col-md-offset-1">
     <h2>Photo feed for #2barbs</h2>
-    <p>Updates every 24 hours. To show up in the feed, use #2barbs in either Instagram or Facebook</p>
+    <p>Updates every 24 hours. To show up in the feed, use #2barbs in either Instagram or Twitter.</p>
 </div>
 <div class="col-md-12 feed">
     <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
