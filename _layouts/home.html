@@ -12,3 +12,27 @@
 </article>
 
 {% include footer.html %}
+<script>
+//HOME JS
+var SetSplashHeight = {
+  init : function(winHeight){
+  	var splash = $('.splash');
+	var subInfo = $('.sub-info').innerHeight();
+	var nav = $('.navbar').outerHeight(true);
+	splash.height(winHeight - subInfo - nav);
+  }
+};
+
+$(document).ready(function(){
+	var winHeight = $(window).height();
+	SetSplashHeight.init(winHeight);
+});
+
+$(window).resize( function(){
+	var winHeight = $(this).height();
+ 	SetSplashHeight.init(winHeight);
+});
+
+</script>
+</body>
+</html>

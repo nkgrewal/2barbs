@@ -6,39 +6,6 @@
 @import '_vars';
 
 
-/* FONTS USED */
-@font-face {
-  font-family: 'Nickainley';
-  src: url('../fonts/nickainley.eot');
-  src: url('../fonts/nickainley.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/nickainley.woff2') format('woff2'),
-       url('../fonts/nickainley.woff') format('woff'),
-       url('../fonts/nickainley.ttf') format('truetype'),
-       url('../fonts/nickainley.svg#fabfeltscriptbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Clear Sans';
-  src: url('../fonts/ClearSans-Regular-webfont.eot');
-  src: url('../fonts/ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/ClearSans-Regular-webfont.woff') format('woff'),
-       url('../fonts/ClearSans-Regular-webfont.ttf') format('truetype'),
-       url('../fonts/ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Clear Sans';
-  src: url('../fonts/ClearSans-Light-webfont.eot');
-  src: url('../fonts/ClearSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/ClearSans-Light-webfont.woff') format('woff'),
-       url('../fonts/ClearSans-Light-webfont.ttf') format('truetype'),
-       url('../fonts/ClearSans-Light-webfont.svg#clear_sans_lightregular') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-
 body {
   @extend %textFont;
   font-size: 18px;
@@ -404,13 +371,20 @@ nav.navbar {
 }*/
 
 
-.home-info a{
-  border:1px solid $secondary-light;
-  color:#000;
-  line-height:2.2em;
-  padding:4px 10px;
-  opacity:.4;
-  &:hover{opacity:.6;}
+.home-info {
+  padding:2em 0;
+  position:relative;
+  @extend %theme-bg;
+
+  a {
+    border:1px solid $secondary-light;
+    color:black;
+    line-height:2.2em;
+    padding:4px 10px;
+    opacity:.4;
+
+    &:hover{opacity:.6;}
+  }
 }
 p, ul{font-weight:200}
 ul{
@@ -418,9 +392,8 @@ ul{
   padding-left:0;
 }
 .navbar{
-  background-color:rgba(255,255,255,.4);
-  border-bottom:8px solid rgba(255,255,255,.2);
-  padding:12px 0;
+  background-color:rgba(255,255,255,.6);
+  padding:2px 0;
   @extend %lace-bg;
 
   a{
@@ -432,7 +405,29 @@ ul{
     margin-right:5px;
     @extend %lace-bg;
   }
+
+  &:after {
+    content: '';
+    height:80px;
+    display: block;
+    width: 100%;
+    background-image: url('../img/lace-border.png');
+    background-size: 18%;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    position: absolute;
+    z-index:-2;
+  }
+  &:after {
+    bottom: -30px;
+    left: 0;
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 }
+
 a.navbar-brand{
   @extend %displayFont;
   font-size:1.2em;
@@ -464,8 +459,9 @@ a.navbar-brand{
   margin-top:0;
   text-align:center;
   font-size:0.8em;
-  border-top: 1px dotted $secondary-light;
+  border-top: 8px solid #444;
   @extend %lace-bg;
+
   
   p{padding-top:3rem;}
 }
@@ -514,7 +510,9 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
   color:$bg-color;
   padding:3.5rem 2rem;
   position:relative;
-  @extend %theme-bg;
+  @extend %lace-bg2;
+  @extend %theme-border;
+  border-right:none;border-left:none;
 
   h2{margin:0;position:relative;z-index:1}
 }
@@ -523,8 +521,8 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
   margin:0 auto;
   padding:2rem 4rem;
   max-width:800px;
-  border-left:1px solid #dedede;
-  border-right:1px solid #dedede;
+  @extend %theme-border;
+  background-color:#fff;
   text-align:left;
   position:relative;
 
@@ -566,23 +564,26 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
 .feed{
   @extend %theme-bg;
   background-color:#eee;
-  border-top:1px solid #e9e9e9;
-  &:before{opacity:.85;}
+  border-top:8px solid #444;
 }
-.juicer-feed h1.referral{
-  position:absolute;
-  bottom:-15px;
+.juicer-feed {
+  h1.referral{
+    position:absolute;
+    bottom:-15px;
+
+    a{
+      color:#bbb !important;
+      font-size:14px;
+    }
+  }
+  &.loaded{ overflow:hidden; }
+  .feed-item{
+    -webkit-box-shadow: 0px 2px 6px 3px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 2px 6px 3px rgba(0,0,0,0.55);
+    box-shadow: 0px 2px 6px 3px rgba(0,0,0,0.55);
+  }
 }
-.juicer-feed h1.referral a{
-  color:#bbb !important;
-  font-size:14px;
-}
-.juicer-feed.loaded{
-  overflow:hidden;
-}
-.j-stacker-wrapper{
-  padding:15px 0;
-}
+.j-stacker-wrapper{ padding:30px 0; }
 
 
 /*POST*/
