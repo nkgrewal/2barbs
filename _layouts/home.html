@@ -17,9 +17,11 @@
 var SetSplashHeight = {
   init : function(winHeight){
   	var splash = $('.splash');
-	var subInfo = $('.sub-info').innerHeight();
-	var nav = $('.navbar').outerHeight(true);
-	splash.height(winHeight - subInfo - nav);
+	var subInfo = $('.sub-info').outerHeight(true);
+	var nav = $('.navbar').innerHeight();
+	if(winHeight > 650){
+		splash.height(winHeight - subInfo - nav);
+	}
   }
 };
 
