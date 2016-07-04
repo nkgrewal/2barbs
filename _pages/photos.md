@@ -1,7 +1,7 @@
 ---
 layout: inner
-title: Photos
-permalink: /photos/
+title: Photo Feed
+permalink: /photo-feed/
 ---
 <div class="col-md-10 col-md-offset-1">
     <h2>Photo feed for #2barbs</h2>

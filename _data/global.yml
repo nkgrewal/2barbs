@@ -4,7 +4,7 @@ nav-title: 'When Goonies Collide'
 description: 'Get all your info for the big extravaganza here'
 byline: 
   '<ul class="byline">
-    <li>September 17th, 2016 <a href="https://www.google.com/maps/place/Evergreen+Gardens/@48.8906509,-122.518461,15z/data=!4m2!3m1!1s0x0:0xd46ce9dd5faf67bc">@ Evergreen Gardens</a>
+    <li>September 17th, 2016</li>
     <li class="hashbrown">#2barbs</li>
   </ul>'
 url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site

@@ -9,7 +9,7 @@
 body {
   @extend %textFont;
   font-size: 18px;
-  line-height: 1.4em;
+  line-height: 1.45em;
   padding-top: 55px;
   -webkit-font-smoothing: antialiased;
 }
@@ -370,34 +370,49 @@ nav.navbar {
   }
 }*/
 
+img{
+  display:block;
+  margin:1em auto;
+  padding:1em;
+  border:1px solid #ccc;
+  max-width:100%;
+  height:auto;
+}
+
+a {
+  border:1px solid rgba($secondary-color,.3);
+  color:$primary-color;
+  padding:5px 10px;
+  opacity:.7;
+  transition: all 0.5s ease;
+
+  &:hover{
+    background-color:$primary-color;
+    color:white;
+    opacity:.8;
+  }
+}
+i{margin-right:2px;}
 
 .home-info {
-  padding:3em 0;
+  padding:100px 0;
   position:relative;
   @extend %theme-bg;
-
-  a {
-    border:1px solid $secondary-light;
-    color:black;
-    line-height:2.2em;
-    padding:4px 10px;
-    opacity:.4;
-
-    &:hover{opacity:.6;}
-  }
+  border-bottom:8px solid $dark-gray;
 
   & > div {padding:0;}
 }
 p, ul{font-weight:200}
+p a{padding-top:3px;padding-bottom:3px;}
 ul{
   list-style:none;
   padding-left:0;
 }
 .navbar{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0.7+100 */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.6) 85%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 45%,rgba(255,255,255,0.6) 85%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 45%,rgba(255,255,255,0.6) 85%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0.6) 88%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 45%,rgba(255,255,255,0.6) 88%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.85) 45%,rgba(255,255,255,0.6) 88%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b3ffffff',GradientType=0 ); /* IE6-9 */
   border:none;
 
@@ -405,14 +420,13 @@ ul{
  
   a{
     color:$secondary-dark;
+    border:none;
     @include border-right-radius(2px);
     @include border-left-radius(2px);
-    background-color:rgba(255,255,255,.4);
+    background-color:rgba(255,255,255,.5);
+    opacity:1;
   }
-  i{
-    margin-right:5px;
-    @extend %lace-bg;
-  }
+  i{ @extend %lace-bg; }
 
   &:after {
     content: '';
@@ -425,7 +439,7 @@ ul{
     z-index:-2;
     opacity:.95;
     background-image: url('../img/lace-border.png');
-    background-size: 235px auto;
+    background-size: 210px auto;
     background-repeat: repeat-x;
     background-position: 0 0;
     -moz-transform: rotate(180deg);
@@ -455,12 +469,12 @@ a.navbar-brand{
   border-top:1px dotted $secondary-light;
   border-bottom:1px dotted $secondary-light;
 
-  li, a{display:inline-block;}
-  li{
+  li{ 
+    display:inline-block;
     padding:0 20px;
-    display:block;
+
+    &:first-child{border-right:1px solid $lt-gray;} 
   }
-  a{font-weight:500;}
 }
 .site-footer{
   margin-top:0;
@@ -503,13 +517,11 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
     font-size:16px;
     padding:2rem;
     background-color:rgba(255,255,255,.3);
-    border:1px dotted $secondary-light;
-    @include border-top-radius(4px);
-    @include border-bottom-radius(4px);
+    border-bottom:none;
+    /*@include border-top-radius(4px);*/
 
-    li, a{display:block;}
     li{padding:0 20px;}
-    a{font-weight:500;}
+    a{font-weight:500; display:none;}
   }
 }
 .sub-info{
@@ -527,7 +539,7 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
 .invite{
   margin:0 auto;
   padding:2rem 4rem;
-  max-width:800px;
+  max-width:830px;
   @extend %theme-border;
   background-color:#fff;
   text-align:left;
@@ -591,15 +603,6 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
     padding-bottom:.4em;
     border-bottom:1px solid $lt-gray;
     clear:both;
-  }
-
-  img{
-    display:block;
-    margin:1em auto;
-    padding:1em;
-    border:1px solid #ccc;
-    max-width:100%;
-    height:auto;
   }
 
   .sidebar{

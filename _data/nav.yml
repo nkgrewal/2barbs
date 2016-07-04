@@ -1,2 +1,2 @@
 main:
-    - { url: '/photos', text: 'Photos' }
+    - { url: '/photos-feed', text: 'Photo Feed' }
