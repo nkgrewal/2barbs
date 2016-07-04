@@ -3,9 +3,9 @@ layout: inner
 title: Photo Feed
 permalink: /photo-feed/
 ---
-<div class="col-md-10 col-md-offset-1">
-    <h2>Photo feed for #2barbs</h2>
-    <p>Updates every 24 hours. To show up in the feed, use #2barbs in either Instagram or Twitter.</p>
+<div class="col-md-10 col-md-offset-1 center">
+    <p>Updates every 24 hours. <br />To show up in the feed, use #2barbs in either Instagram or Twitter.</p>
+    <p><a href="{{site.url}}/engagement">Engagement pics here.</a></p>
 </div>
 <div class="col-md-12 feed">
     <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>

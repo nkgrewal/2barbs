@@ -10,6 +10,8 @@ $secondary-dark: #655f78;
 $secondary-active: #805c9b;
 $highlight: #f7de86;
 
+$b-width: 8px;
+
 /* FONTS USED */
 @font-face {
   font-family: 'Nickainley';
@@ -49,6 +51,7 @@ $highlight: #f7de86;
 /* SHARED BG IMAGE */
 %lace-bg{ background:url(../img/lace-bg2.png) repeat center / 100% auto;}
 %theme-bg{
+  position:relative;
   background-color:$primary-color;
   &:before{
     background:url(../img/flowersbg.png) repeat;
@@ -74,4 +77,24 @@ $highlight: #f7de86;
     z-index:0;
   }
 }
-%theme-border{border:8px solid #444;}
+%theme-border{
+  border:$b-width solid $dark-gray;
+}
+%theme-border-half{
+  border-top:$b-width solid $dark-gray;
+  border-bottom:$b-width solid $dark-gray;
+}
+%theme-border-bottom{ border-bottom:$b-width solid $dark-gray; }
+%theme-border-top{ border-top:$b-width solid $dark-gray; }
+
+@media only screen and (min-width : 600px) {
+  %theme-border,%theme-border-half,%theme-border-bottom,%theme-border-top{
+    border-width:$b-width*1.5 ;
+  }
+}
+
+@media only screen and (min-width : 992px) {
+  %theme-border,%theme-border-half,%theme-border-bottom,%theme-border-top{
+    border-width:$b-width*2 ;
+  }
+}

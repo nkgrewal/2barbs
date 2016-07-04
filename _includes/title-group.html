@@ -21,14 +21,13 @@
             {% endif %}
             </span>
         </h1>
-        <p class="lead">
-            {% if page.lead_text %}  
-                <p>{{ page.lead_text }}</p>
-            {% elsif post.lead_text %}
-                <p>{{ post.lead_text }}</p>
-            {% endif %}
-            {{ site.data.global.byline }}
-        </p>
+        {% if page.lead_text %}  
+            <p class="lead">{{ page.lead_text }}</p>
+        {% elsif post.lead_text %}
+            <p class="lead">{{ post.lead_text }}</p>
+        {% endif %}
+        {{ site.data.global.byline }}
+
         <!--{% if page.id %}
         <aside>
             {{ page.date | date: "%m.%d.%y" }}

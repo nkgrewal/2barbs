@@ -53,7 +53,7 @@
 
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
-            <div class="navbar-header pull-left">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -65,8 +65,8 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% for item in site.data.nav.main %}
-                        <li>
-                            <a href="{{ item.url }}">{{ item.text }}</a>
+                        <li {% if page.url contains item.url %}class="active"{% endif %}>
+                            <a href="{{ item.url }}"><i class="fa fa-{{ item.fa_icon }}" aria-hidden="true"></i>{{ item.text }}</a>
                         </li>
                     {% endfor %}
                 </ul>
