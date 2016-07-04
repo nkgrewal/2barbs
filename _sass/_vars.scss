@@ -1,0 +1,27 @@
+$bg-color:#fff;
+$primary-color: #964F4C;
+$primary-light:#C26A5A;
+$secondary-color: #8981A0;
+$secondary-light: #C3BABF;
+$secondary-dark: #655f78;
+$secondary-active: #805c9b;
+$highlight: #f7de86;
+
+%displayFont { font-family: 'Nickainley', 'Palatino Linotype', 'Book Antiqua', Palatino, serif; }
+%textFont { font-family: 'Clear Sans', sans-serif; }
+
+/* SHARED BG IMAGE */
+%lace-bg{ background:url(../img/lace-bg.png) repeat center / 100% auto;}
+%theme-bg{
+  background-color:$primary-color;
+  &:before{
+    @extend %lace-bg;
+    content: " ";
+    display:block;
+    position:absolute;top:0;left:0;
+    width: 100%; 
+    height: 100%;  
+    opacity: .15; 
+    z-index:0;
+  }
+}
