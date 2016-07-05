@@ -4,7 +4,7 @@ nav-title: 'When Goonies Collide'
 description: 'Get all your info for the big extravaganza here'
 byline: 
   '<ul class="byline">
-    <li>September 17th, 2016</li>
+    <li class="countdown">September 17th</li>
     <li class="hashbrown">#2barbs</li>
   </ul>'
 url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site

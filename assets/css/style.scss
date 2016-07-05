@@ -12,6 +12,7 @@ body {
   line-height: 1.45em;
   padding-top: 55px;
   -webkit-font-smoothing: antialiased;
+  color:$dark-marsala;
 }
 p {
   margin-bottom: 30px;
@@ -387,12 +388,18 @@ a {
   transition: all 0.5s ease;
 
   &:hover{
+    @extend %lace-bg3;
     background-color:$primary-color;
     color:white;
     opacity:.8;
   }
 }
 i{margin-right:2px;}
+hr{
+  margin:4em auto;
+  position:relative;
+  border-top:1px dotted $lt-gray;
+}
 .center{text-align:center;}
 
 .home-info {
@@ -487,6 +494,13 @@ a.navbar-brand{
   border-top:1px dotted $secondary-light;
   border-bottom:1px dotted $secondary-light;
 
+  .countdown span{
+    font-weight:500;
+    border:1px solid $lt-gray;
+    margin-right:2px;
+    padding:3px 5px;
+  }
+
   li{ 
     display:inline-block;
     padding:0 20px;
@@ -524,13 +538,19 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
 .splash {
   margin-top:-55px;
   padding-top:55px;
-  background:url(../img/mobile-bg.jpg) no-repeat center center / auto 100%;
+  background:url(../img/mobile-bg2.jpg) no-repeat center right / auto 100% $dark-marsala;
+
   .special{
       line-height:1em;
       padding-bottom:.15em;
       font-size:72px;
   }
-  .title-group{margin-top:0;padding:10rem 0 7rem 0}
+  .title-group{
+    margin-top:75px;
+    padding:10rem 0 7rem 0;
+    margin-left:0;
+  }
+  h1{color:#fff;}
   .title-group > div:after{display:none;}
   .byline{
     font-size:16px;
@@ -548,11 +568,11 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
   color:$bg-color;
   padding:3.5rem 2rem;
   position:relative;
-  @extend %lace-bg2;
+  @extend %lace-bg3;
   @extend %theme-border-half;
   border-right:none;border-left:none;
 
-  h2{margin:0;position:relative;z-index:1}
+  h2{margin:0;position:relative;z-index:1;font-size:1.3em}
 }
 /*.home-info{background:url(../img/patterns2.jpg) repeat;}*/
 .invite{
@@ -564,6 +584,13 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
   text-align:left;
   position:relative;
 
+  .lead {
+    margin:1em auto 4em auto;
+    font-size:1.15em;
+
+    h1{margin-top:1.8em;}
+  }
+
   .highlight{
     background-color:$highlight;
     display:inline-block;
@@ -573,7 +600,6 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
     padding:.5em 0;
     position:relative;
     z-index:0;
-    color:$dark-gray;
     border-bottom: 1px dotted $lt-gray;
 
     &:first-child{margin-top:1.8em;}
@@ -586,6 +612,50 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
     border-top:1px solid $lt-gray;
   }
 }
+.stay-info {
+  & > div {
+    margin:0;
+    padding:0;
+
+    a{
+      height:100%;
+      color:$dark-marsala;
+      &:hover{color:#fff;}
+    }
+
+    & > div{
+      width:100%;
+      height:200px;
+      border:1px solid#fff;
+    }
+  }
+  a,i{display:block;}
+  i{line-height:1.8em;}
+  h2{
+    vertical-align:middle;
+    margin:30px auto;
+    text-align:center;
+  }
+  .hotel {background:url(../img/hotels-bg.jpg) no-repeat right #999;}
+  .registry {
+    background-color:$secondary-color; 
+    a{color:#fff;}
+  }
+  .feed{
+    border:none;
+    background-color:$secondary-light;
+
+    &:before{display:none;}
+  }
+  .wlog {
+    background-color:$secondary-active;
+    a{color:#fff;}
+  }
+  .engagement {background:url(../img/engagement-bg.jpg) no-repeat top center;}
+  .rsvp {background:url(../img/rsvp-bg2.jpg) no-repeat center}
+}
+
+
 .feed{
   @extend %theme-bg;
   @extend %theme-border-top;
@@ -687,28 +757,14 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
     position:relative;
     z-index:0;
     border-bottom: 15px solid rgba(120,120,120,.1);
-    background:none;
-
-    &:before, &:after{
-      content:' ';
-      display: block;
-      width:100%;
-      height:inherit;
-      position:absolute;
-      top:0;left:0;
-      z-index:-1;
-    }
-
-    &:before{background:url(../img/max-bg.jpg) no-repeat bottom right / auto 58%;}
-    
-    &:after{background:url(../img/bridget-bg.jpg) no-repeat bottom left / auto 57%;}
     
     .title-group{
+      margin-left:1em;
+      margin-top:180px;
       padding:4rem 0 2rem 0;
       width:80%;
-      position: relative;
-      top:3.5rem;
       width:450px;
+      background-color:rgba(255,255,255,.3);
     }
   }
   .home-info a{display:inline-block;}
@@ -722,6 +778,11 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
       &.pull-right{margin-left:1.5em;;}
     }
   }
+  .stay-info {
+    h2 {margin:100px auto;}
+    &.half > div > div {height:440px;}
+    & > div > div {height:300px;}
+  }
 }
 @media only screen and (min-width : 992px) {
   /* SHARED BG IMAGE */
@@ -731,10 +792,29 @@ hr.decorative:after, .site-footer > div:after { top: -15px; }
   .splash{
     min-width:900px;
     height:620px;
+    background:none;
+    
+    .title-group{
+      margin-top:50px;
+      margin-left:auto;
+    }
+    h1{color:$primary-color;}
 
-    &:before{background-size:auto 68%;}
-    &:after{background-size:auto 67%;}
+    &:before, &:after{
+      content:' ';
+      display: block;
+      width:100%;
+      height:inherit;
+      position:absolute;
+      top:0;left:0;
+      z-index:10;
+    }
+
+    &:before{background:url(../img/max-bg.png) no-repeat bottom right / auto 70%;}
+    
+    &:after{background:url(../img/bridget-bg.png) no-repeat bottom left / auto 67%;}
   }
   .invite{ padding:90px 160px 110px 160px; }
+  .sub-info{font-size:1.3em;}
 }
 
