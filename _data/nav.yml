@@ -1,5 +1,5 @@
 main:
-  - { url: '../photo-feed', text: 'Photos', fa_icon: 'th-large' }
-  - { url: '../hotels-registry', text: 'Hotels & Registry', fa_icon: 'gift' }
+  - { url: '/photo-feed', text: 'Photos', fa_icon: 'th-large' }
+  - { url: '/hotels-registry', text: 'Hotels & Registry', fa_icon: 'gift' }
   - { url: 'https://navreengdesign.typeform.com/to/QoxvtK', text: 'RSVP', fa_icon: 'envelope-o' }
-  - { url: '../wlog', text: 'Wlog', fa_icon: 'pencil' }
+  - { url: '/wlog', text: 'Wlog', fa_icon: 'pencil' }
