@@ -7,7 +7,7 @@ byline:
     <li class="countdown">September 17th</li>
     <li class="hashbrown">#2barbs</li>
   </ul>'
-url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site
+url: 'http://127.0.0.1:4000/2barbs' # the base hostname & protocol for your site
 footer_text: 'Who&apos;s ready to party their faces off?'
 
 # Admin Settings
